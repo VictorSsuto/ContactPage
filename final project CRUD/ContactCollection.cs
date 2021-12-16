@@ -8,7 +8,7 @@ namespace final_project_CRUD
 {
     class ContactCollection
     {
-
+        //used to create the user
         public ContactCollection(string Fname, string Lname, string phone, string email)
         {
             this.First_Name = Fname;
@@ -17,7 +17,7 @@ namespace final_project_CRUD
             this.Email = email;
         }
 
-
+        //added an ID since we are updating, deleting and viewing a specific contact
         public ContactCollection(int id, string Fname, string Lname, string phone, string email)
         {
             this.Id = id;

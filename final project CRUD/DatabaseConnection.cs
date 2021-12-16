@@ -13,7 +13,7 @@ namespace final_project_CRUD
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         
-     
+     //read contact
         public List<ContactCollection> getAllContacts() {
             List<ContactCollection> contact = new List<ContactCollection>();
 
@@ -44,8 +44,8 @@ namespace final_project_CRUD
 
         }
 
-      
-        public int InsertContact(ContactCollection contact) 
+      //Creates contact
+        public int CreateContact(ContactCollection contact) 
         {
             int returnId = 0;
             SqlConnection connection = new SqlConnection(connectionString);
@@ -85,7 +85,7 @@ namespace final_project_CRUD
 
         }
 
-
+        //reads the specific contact regarding the ID
         public ContactCollection getContact(int id) 
         {
             ContactCollection c = null;
@@ -117,7 +117,7 @@ namespace final_project_CRUD
 
 
 
-
+        //updates the contact using ID
         public void UpdateContact(ContactCollection contact)
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -148,7 +148,7 @@ namespace final_project_CRUD
 
         }
 
-
+        //Deletes a contact using ID 
         public void DeleteContact(ContactCollection contact)
         {
             SqlConnection connection = new SqlConnection(connectionString);
