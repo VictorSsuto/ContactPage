@@ -13,7 +13,7 @@ namespace final_project_CRUD
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         
-        //read all contacts 
+     
         public List<ContactCollection> getAllContacts() {
             List<ContactCollection> contact = new List<ContactCollection>();
 
@@ -44,7 +44,7 @@ namespace final_project_CRUD
 
         }
 
-        //adds contact
+      
         public int InsertContact(ContactCollection contact) 
         {
             int returnId = 0;
@@ -65,7 +65,7 @@ namespace final_project_CRUD
                 var rowsAffected = command.ExecuteNonQuery();
                 Console.WriteLine("Contact Inserted Successfully");
 
-                string query2 = "Select @@Identity as newId from Contact_Information";
+                string query2 = "Select @@Identity as newId from UserDetail";
                 command.CommandText = query2;
                 command.CommandType = CommandType.Text;
                 command.Connection = connection;
@@ -86,7 +86,7 @@ namespace final_project_CRUD
         }
 
 
-        public ContactCollection getContact(int id) // reads/views specefic contact corespnsding to chosen Id, Works in conjunction with Updating a contact based on it's Id
+        public ContactCollection getContact(int id) 
         {
             ContactCollection c = null;
 
@@ -98,7 +98,7 @@ namespace final_project_CRUD
 
                 using (SqlDataReader SqlDataReader = command.ExecuteReader())
                 {
-                    if (!sdr.HasRows)
+                    if (!SqlDataReader.HasRows)
                     {
                         Console.WriteLine("No contacts Found");
                     }
@@ -152,7 +152,7 @@ namespace final_project_CRUD
         public void DeleteContact(ContactCollection contact)
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            // string query = "UPDATE Contact_Information set First_Name = @First_Name, Last_Name = @Last_Name, Phone_Number = @Phone_Number,Email = @Email where Id = @Id";
+
             string query = "DELETE FROM UserDetail WHERE Id = @Id";
 
 

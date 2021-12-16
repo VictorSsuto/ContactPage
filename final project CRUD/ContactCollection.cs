@@ -9,7 +9,7 @@ namespace final_project_CRUD
     class ContactCollection
     {
 
-        public ContactCollection(string Fname, string Lname, string phone, string email)//used for creating contacts(insert).
+        public ContactCollection(string Fname, string Lname, string phone, string email)
         {
             this.First_Name = Fname;
             this.Last_Name = Lname;
@@ -18,7 +18,7 @@ namespace final_project_CRUD
         }
 
 
-        public ContactCollection(int id, string Fname, string Lname, string phone, string email)//used for reading,updating and deleting Contacts.
+        public ContactCollection(int id, string Fname, string Lname, string phone, string email)
         {
             this.Id = id;
             this.First_Name = Fname;
