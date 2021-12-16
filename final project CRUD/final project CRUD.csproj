@@ -56,12 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ContactCollection.cs" />
     <Compile Include="CreateContact.xaml.cs">
       <DependentUpon>CreateContact.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="EditingContact.xaml.cs">
       <DependentUpon>EditingContact.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages Detail\CreatePageDetail.cs" />
+    <Compile Include="Pages Detail\DeletePageDetails.cs" />
+    <Compile Include="Pages Detail\EditPageDetails.cs" />
+    <Compile Include="Pages Detail\ViewPageDetails.cs" />
     <Compile Include="Pages\createPage.xaml.cs">
       <DependentUpon>createPage.xaml</DependentUpon>
     </Compile>
@@ -74,6 +80,7 @@
     <Compile Include="Pages\viewPage.xaml.cs">
       <DependentUpon>viewPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="summarizedList.xaml.cs">
       <DependentUpon>summarizedList.xaml</DependentUpon>
     </Compile>
