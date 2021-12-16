@@ -9,20 +9,22 @@ namespace final_project_CRUD
     class ContactCollection
     {
         //used to create the user
-        public ContactCollection(string Fname, string Lname, string phone, string email)
+        public ContactCollection(string first, string Last, string age, string phone, string email)
         {
-            this.First_Name = Fname;
-            this.Last_Name = Lname;
+            this.First_Name = first;
+            this.Last_Name = Last;
+            this.age = age;
             this.Phone_Number = phone;
             this.Email = email;
         }
 
         //added an ID since we are updating, deleting and viewing a specific contact
-        public ContactCollection(int id, string Fname, string Lname, string phone, string email)
+        public ContactCollection(int id, string first, string Last, string age, string phone, string email)
         {
             this.Id = id;
-            this.First_Name = Fname;
-            this.Last_Name = Lname;
+            this.First_Name = first;
+            this.Last_Name = Last;
+            this.age = age;
             this.Phone_Number = phone;
             this.Email = email;
         }
@@ -32,6 +34,7 @@ namespace final_project_CRUD
         public int Id { get; set; }
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
+        public string age { get; set; }
         public string Phone_Number { get; set; }
         public string Email { get; set; }
 
