@@ -30,14 +30,23 @@ namespace final_project_CRUD
             ew.Show();
         }
 
-
         private void Create(object sender, RoutedEventArgs e)
         {
-
             CreateDetailsWindow cr = new CreateDetailsWindow();
             cr.Show();
         }
 
+        private void View(object sender, RoutedEventArgs e)
+        {
+            ViewContactWindow vw = new ViewContactWindow();
+            vw.Show();
 
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            DeleteContactWindow DW = new DeleteContactWindow();
+            DW.Show();
+        }
     }
 }

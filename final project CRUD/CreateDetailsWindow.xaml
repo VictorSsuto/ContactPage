@@ -8,6 +8,10 @@
               Title="Adding Contact" Height="300" Width="250" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"   Icon="cat no.jpg" >
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Create.jpg"/>
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,19 +24,19 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Foreground="Black"  Content="First Name:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15"/>
+        <Label Foreground="Black"  Content="First Name:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" FontWeight="ExtraBold"/>
         <TextBox Foreground="White" x:Name="FirstName" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" FontSize="12" Background="#FF686868"/>
-        <Label Foreground="Black" Content="Last Name:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="1"/>
+        <Label Foreground="Black" Content="Last Name:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="1" FontWeight="ExtraBold"/>
         <TextBox Foreground="White" x:Name="LastName" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" Grid.Row="1" FontSize="12" Background="#FF686868"/>
 
-        <Label Foreground="Black" Content="Age:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="2"/>
+        <Label Foreground="Black" Content="Age:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="2" FontWeight="ExtraBold"/>
         <TextBox Foreground="White" x:Name="Age" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" Grid.Row="2" FontSize="12" Background="#FF686868"/>
 
-        <Label Foreground="Black" Content="Email:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="3"/>
+        <Label Foreground="Black" Content="Email:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="3" FontWeight="ExtraBold"/>
         <TextBox Foreground="White" x:Name="Email" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" Grid.Row="3" FontSize="12" Background="#FF686868"/>
 
-        <Label Foreground="Black" Content="Phone Number:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="4"/>
+        <Label Foreground="Black" Content="Phone Number:" HorizontalAlignment="Right" Margin="0,0,0,3" VerticalAlignment="Center" Width="Auto" FontSize="15" Grid.Row="4" FontWeight="ExtraBold"/>
         <TextBox Foreground="White" x:Name="PhoneNumber" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" Grid.Row="4" FontSize="12" Background="#FF686868"/>
-        <Button Content="Add Contact" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="122" Height="45" Click="Button_Click"/>
+        <Button Content="Add Contact" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="122" Height="45" Click="Addcontact" Background="Transparent"  FontWeight="Bold"/>
     </Grid>
 </Window>

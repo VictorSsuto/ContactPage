@@ -24,9 +24,10 @@ namespace final_project_CRUD
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Addcontact(object sender, RoutedEventArgs e)
         {
-
+            Addcontact AC = new Addcontact();
+            AC.Show();
         }
         
     }

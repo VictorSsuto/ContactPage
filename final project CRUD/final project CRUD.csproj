@@ -56,25 +56,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Addcontact.xaml.cs">
+      <DependentUpon>Addcontact.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ContactCollection.cs" />
     <Compile Include="CreateDetailsWindow.xaml.cs">
       <DependentUpon>CreateDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DeleteContact.xaml.cs">
+      <DependentUpon>DeleteContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteContactWindow.xaml.cs">
+      <DependentUpon>DeleteContactWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditContact.xaml.cs">
+      <DependentUpon>EditContact.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditingContactWindow.xaml.cs">
       <DependentUpon>EditingContactWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mainwindow.xaml.cs">
       <DependentUpon>Mainwindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages Detail\CreatePageDetail.cs" />
-    <Compile Include="Pages Detail\DeletePageDetails.cs" />
-    <Compile Include="Pages Detail\EditPageDetails.cs" />
-    <Compile Include="Pages Detail\ViewPageDetails.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewContactWindow.xaml.cs">
+      <DependentUpon>ViewContactWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -104,10 +115,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\" />
+    <Resource Include="Bliss.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Addcontact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreateDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteContactWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditContact.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,9 +146,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ViewContactWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="cat no.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Create.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Delete.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

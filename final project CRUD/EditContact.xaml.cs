@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace final_project_CRUD
 {
     /// <summary>
-    /// Interaction logic for EditingContactWindow.xaml
+    /// Interaction logic for EditContact.xaml
     /// </summary>
-    public partial class EditingContactWindow : Window
+    public partial class EditContact : Window
     {
-        public EditingContactWindow()
+        public EditContact()
         {
             InitializeComponent();
         }
-
-    private void Update(object sender, RoutedEventArgs e)
-        {
-            EditContact EC = new EditContact();
-            EC.Show();
-        }
-       
     }
 }

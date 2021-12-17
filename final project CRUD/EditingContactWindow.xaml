@@ -8,6 +8,10 @@
         Title="EditingContactWindow" Height="300" Width="250" Icon="cat no.jpg">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Edit.jpg"/>
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,13 +24,13 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Update the contact" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="121" Height="44" Click="Button_Click"/>
-        <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,9,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="110"/>
-        <Label Content="Last name:" HorizontalAlignment="Left" Margin="42,11,0,10" Grid.Row="1"/>
+        <Button Content="Update the contact" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="121" Height="44" Click="Update" FontWeight="Bold" Background="Transparent"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="28,9,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="110" FontWeight="Bold"/>
+        <Label Content="Last name:" HorizontalAlignment="Left" Margin="42,11,0,10" Grid.Row="1" FontWeight="Bold"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="67,35,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="42,11,0,0" Grid.Row="3" VerticalAlignment="Top" Width="63"/>
-        <Label Content="Phone number:" HorizontalAlignment="Left" Margin="28,12,0,0" Grid.Row="4" VerticalAlignment="Top" Width="93"/>
-        <Label Content="Age:" HorizontalAlignment="Left" Margin="42,10,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="42,11,0,0" Grid.Row="3" VerticalAlignment="Top" Width="63"  FontWeight="Bold"/>
+        <Label Content="Phone number:" HorizontalAlignment="Left" Margin="28,12,0,0" Grid.Row="4" VerticalAlignment="Top" Width="93"  FontWeight="Bold"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="42,10,0,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="33,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox Foreground="White" x:Name="FirstName" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" FontSize="12" Background="#FF686868"/>
         <TextBox Foreground="White" x:Name="LastName" HorizontalAlignment="Center" Height="20" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Width="100" Grid.Column="1" Grid.Row="1" FontSize="12" Background="#FF686868"/>

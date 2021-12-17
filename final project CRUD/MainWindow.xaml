@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:final_project_CRUD"
         mc:Ignorable="d"
         Title="Mainwindow" Height="450" Width="800" Icon="cat no.jpg">
-    <Grid>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="Bliss.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="94*"/>
             <ColumnDefinition Width="81*"/>
@@ -21,13 +24,14 @@
             <ContentControl.Background>
                 <ImageBrush/>
             </ContentControl.Background>
+            <TextBlock HorizontalAlignment="Left" Margin="247,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"><Run Text=" "/><Run Text="Welcome to the Contact Manager"  FontWeight="Bold" FontSize="40" /><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         </ContentControl>
-        <Button Content="Create Contact" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="113" Click="Create"/>
-        
-        <Button Content="Edit Contact"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Margin="0,113,0,0" Height="109" Click="EditButton"/>
-        
-        <Button Content="View Contact" HorizontalAlignment="Left" Margin="0,222,0,0" VerticalAlignment="Top" Width="159" Height="103"/>
-        <Button Content="Delete Contact" HorizontalAlignment="Left" Margin="0,325,0,0" VerticalAlignment="Top" Width="159" Height="94"/>
-        
+        <Button Content="Create Contact" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="113" Click="Create" Background="Transparent" FontWeight="Bold"/>
+
+        <Button Content="Edit Contact"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Margin="0,113,0,0" Height="109" Click="EditButton" Background="Transparent" FontWeight="Bold"/>
+
+        <Button Content="View Contact" HorizontalAlignment="Left" Margin="0,222,0,0" VerticalAlignment="Top" Width="159" Height="103" Click="View" Background="Transparent" FontWeight="Bold"/>
+        <Button Content="Delete Contact" HorizontalAlignment="Left" Margin="0,325,0,0" VerticalAlignment="Top" Width="159" Height="94" Click="Delete" Background="Transparent" FontWeight="Bold"/>
+
     </Grid>
 </Window>
