@@ -33,7 +33,7 @@ namespace final_project_CRUD
                     {
                         while (sqlDataReader.Read())
                         {
-                            ContactCollection c = new ContactCollection((int)sqlDataReader["Id"], (string)sqlDataReader["First_Name"], (string)sqlDataReader["Last_Name"], (string)sqlDataReader["age"],(string)sqlDataReader["Phone_Number"],
+                            ContactCollection c = new ContactCollection((int)sqlDataReader["Id"], (string)sqlDataReader["First_name"], (string)sqlDataReader["Last_name"], (int)sqlDataReader["age"],(int)sqlDataReader["Phone_number"],
                                                             (string)sqlDataReader["Email"]);
                             contact.Add(c);
                         }
@@ -54,10 +54,10 @@ namespace final_project_CRUD
             SqlCommand command = new SqlCommand(query, connection);
 
 
-            command.Parameters.AddWithValue("@First_Name", contact.First_Name);
-            command.Parameters.AddWithValue("@Last_Name", contact.Last_Name);
-            command.Parameters.AddWithValue("@age", contact.age);
-            command.Parameters.AddWithValue("@Phone_Number", contact.Phone_Number);
+            command.Parameters.AddWithValue("@First_Name", contact.First_name);
+            command.Parameters.AddWithValue("@Last_Name", contact.Last_name);
+            command.Parameters.AddWithValue("@age", contact.Age);
+            command.Parameters.AddWithValue("@Phone_Number", contact.Phone_number);
             command.Parameters.AddWithValue("@Email", contact.Email);
 
             try
@@ -106,7 +106,7 @@ namespace final_project_CRUD
                     else
                     {
                         SqlDataReader.Read();
-                        c = new ContactCollection((int)SqlDataReader["Id"], (string)SqlDataReader["First_Name"], (string)SqlDataReader["Last_Name"], (string)SqlDataReader["age"], (string)SqlDataReader["Phone_Number"],
+                        c = new ContactCollection((int)SqlDataReader["Id"], (string)SqlDataReader["First_name"], (string)SqlDataReader["Last_name"], (int)SqlDataReader["Age"], (int)SqlDataReader["Phone_number"],
                                                             (string)SqlDataReader["Email"]);
                     }
                 }
@@ -122,15 +122,15 @@ namespace final_project_CRUD
         public void UpdateContact(ContactCollection contact)
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            string query = "UPDATE UserDetail set First_Name = @First_Name, Last_Name = @Last_Name, Phone_Number = @Phone_Number,Email = @Email, age=@age, where Id = @Id";
+            string query = "UPDATE UserDetail set First_Name = @First_Name, Last_Name =  @Last_Name, Phone_Number = @Phone_Number,Email = @Email, Age=@age, where Id = @Id";
 
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@Id", contact.Id);
-            command.Parameters.AddWithValue("@First_Name", contact.First_Name);
-            command.Parameters.AddWithValue("@Last_Name", contact.Last_Name);
-            command.Parameters.AddWithValue("@age", contact.age);
-            command.Parameters.AddWithValue("@Phone_Number", contact.Phone_Number);
+            command.Parameters.AddWithValue("@First_Name", contact.First_name);
+            command.Parameters.AddWithValue("@Last_Name", contact.Last_name);
+            command.Parameters.AddWithValue("@Age", contact.Age);
+            command.Parameters.AddWithValue("@Phone_Number", contact.Phone_number);
             command.Parameters.AddWithValue("@Email", contact.Email);
 
             try

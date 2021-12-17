@@ -11,33 +11,33 @@ namespace final_project_CRUD
     {
       
         //used to create the userm
-        public ContactCollection(string first, string Last, string age, string phone, string email)
+        public ContactCollection(string first, string Last, int age, int phone, string email)
         {
-            this.First_Name = first;
-            this.Last_Name = Last;
-            this.age = age;
-            this.Phone_Number = phone;
+            this.First_name = first;
+            this.Last_name = Last;
+            this.Age = age;
+            this.Phone_number = phone;
             this.Email = email;
         }
 
         //added an ID since we are updating, deleting and viewing a specific contact
-        public ContactCollection(int id, string first, string Last, string age, string phone, string email)
+        public ContactCollection(int id, string first, string Last, int age, int phone, string email)
         {
             this.Id = id;
-            this.First_Name = first;
-            this.Last_Name = Last;
-            this.age = age;
-            this.Phone_Number = phone;
+            this.First_name = first;
+            this.Last_name = Last;
+            this.Age = age;
+            this.Phone_number = phone;
             this.Email = email;
         }
 
 
 
         public int Id { get; set; }
-        public string First_Name { get; set; }
-        public string Last_Name { get; set; }
-        public string age { get; set; }
-        public string Phone_Number { get; set; }
+        public string First_name { get; set; }
+        public string Last_name { get; set; }
+        public int Age { get; set; }
+        public int Phone_number { get; set; }
         public string Email { get; set; }
 
 
