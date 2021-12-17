@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace final_project_CRUD
 {
     class ContactCollection
     {
-        //used to create the user
+      
+        //used to create the userm
         public ContactCollection(string first, string Last, string age, string phone, string email)
         {
             this.First_Name = first;

@@ -57,73 +57,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ContactCollection.cs" />
-    <Compile Include="CreateContact.xaml.cs">
-      <DependentUpon>CreateContact.xaml</DependentUpon>
+    <Compile Include="CreateDetailsWindow.xaml.cs">
+      <DependentUpon>CreateDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
-    <Compile Include="EditingContact.xaml.cs">
-      <DependentUpon>EditingContact.xaml</DependentUpon>
+    <Compile Include="EditingContactWindow.xaml.cs">
+      <DependentUpon>EditingContactWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mainwindow.xaml.cs">
+      <DependentUpon>Mainwindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages Detail\CreatePageDetail.cs" />
     <Compile Include="Pages Detail\DeletePageDetails.cs" />
     <Compile Include="Pages Detail\EditPageDetails.cs" />
     <Compile Include="Pages Detail\ViewPageDetails.cs" />
-    <Compile Include="Pages\createPage.xaml.cs">
-      <DependentUpon>createPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\deletePage.xaml.cs">
-      <DependentUpon>deletePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\editPage.xaml.cs">
-      <DependentUpon>editPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\viewPage.xaml.cs">
-      <DependentUpon>viewPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="summarizedList.xaml.cs">
-      <DependentUpon>summarizedList.xaml</DependentUpon>
-    </Compile>
-    <Page Include="CreateContact.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EditingContact.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Pages\createPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\deletePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\editPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\viewPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="summarizedList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -151,6 +103,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CreateDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditingContactWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mainwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cat no.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

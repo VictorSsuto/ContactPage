@@ -12,16 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace final_project_CRUD.PAges
+namespace final_project_CRUD
 {
     /// <summary>
-    /// Interaction logic for deletePage.xaml
+    /// Interaction logic for EditingContactWindow.xaml
     /// </summary>
-    public partial class deletePage : Window
+    public partial class EditingContactWindow : Window
     {
-        public deletePage()
+        public EditingContactWindow()
         {
             InitializeComponent();
         }
+
+    private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+       
     }
 }

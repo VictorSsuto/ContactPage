@@ -10,19 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace final_project_CRUD
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Mainwindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Mainwindow : Window
     {
-        public MainWindow()
+        public Mainwindow()
         {
             InitializeComponent();
         }
+        private void EditButton(object sender, RoutedEventArgs e)
+        {
+
+            EditingContactWindow ew = new EditingContactWindow();
+            ew.Show();
+        }
+
+
+        private void Create(object sender, RoutedEventArgs e)
+        {
+
+            CreateDetailsWindow cr = new CreateDetailsWindow();
+            cr.Show();
+        }
+
+
     }
 }

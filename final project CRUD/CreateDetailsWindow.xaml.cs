@@ -15,15 +15,19 @@ using System.Windows.Shapes;
 namespace final_project_CRUD
 {
     /// <summary>
-    /// Interaction logic for summarizedList.xaml
+    /// Interaction logic for CreateDetailsWindow.xaml
     /// </summary>
-    public partial class summarizedList : Window
+    public partial class CreateDetailsWindow : Window
     {
-        public summarizedList()
+        public CreateDetailsWindow()
         {
             InitializeComponent();
         }
 
-     
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
     }
 }
