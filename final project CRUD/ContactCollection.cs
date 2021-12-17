@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace final_project_CRUD
 {
-    class ContactCollection
+    public class ContactCollection
     {
-      
         //used to create the userm
         public ContactCollection(string first, string Last, int age, int phone, string email)
         {
@@ -32,6 +31,9 @@ namespace final_project_CRUD
         }
 
 
+        public class Contact{
+
+        }
 
         public int Id { get; set; }
         public string First_name { get; set; }

@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Windows;
+using static final_project_CRUD.ContactCollection;
 
 namespace final_project_CRUD
 {
     class DatabaseConnection
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-        
-     //read contact
+
+        //read contact
         public List<ContactCollection> getAllContacts() {
             List<ContactCollection> contact = new List<ContactCollection>();
+ 
 
             using (var connection = new SqlConnection(connectionString))
             {                                      //* to read all 
@@ -33,7 +36,7 @@ namespace final_project_CRUD
                     {
                         while (sqlDataReader.Read())
                         {
-                            ContactCollection c = new ContactCollection((int)sqlDataReader["Id"], (string)sqlDataReader["First_name"], (string)sqlDataReader["Last_name"], (int)sqlDataReader["age"],(int)sqlDataReader["Phone_number"],
+                            ContactCollection c = new ContactCollection((int)sqlDataReader["Id"], (string)sqlDataReader["First_name"], (string)sqlDataReader["Last_name"], (int)sqlDataReader["age"], (int)sqlDataReader["Phone_number"],
                                                             (string)sqlDataReader["Email"]);
                             contact.Add(c);
                         }
@@ -44,33 +47,33 @@ namespace final_project_CRUD
 
         }
 
-      //Creates contact
-        public int CreateContact(ContactCollection contact) 
+        //Creates contact
+        public int CreateContact(ContactCollection contact)
         {
             int returnId = 0;
             SqlConnection connection = new SqlConnection(connectionString);
-            string query = "INSERT INTO UserDetail ( First_Name, Last_Name, Age, Phone_Number, Email) VALUES ( @First_Name, @Last_Name, @age, @Phone_Number, @Email)";
+            string query = "INSERT INTO UserDetail (First_name, Last_name, Age, Phone_number, Email) VALUES ( @First_Name, @Last_Name, @age, @Phone_Number, @Email)";
 
-            SqlCommand command = new SqlCommand(query, connection);
+            SqlCommand cmd = new SqlCommand(query, connection);
 
 
-            command.Parameters.AddWithValue("@First_Name", contact.First_name);
-            command.Parameters.AddWithValue("@Last_Name", contact.Last_name);
-            command.Parameters.AddWithValue("@age", contact.Age);
-            command.Parameters.AddWithValue("@Phone_Number", contact.Phone_number);
-            command.Parameters.AddWithValue("@Email", contact.Email);
+            cmd.Parameters.AddWithValue("@First_Name", contact.First_name);
+            cmd.Parameters.AddWithValue("@Last_Name", contact.Last_name);
+            cmd.Parameters.AddWithValue("@age", contact.Age);
+            cmd.Parameters.AddWithValue("@Phone_Number", contact.Phone_number);
+            cmd.Parameters.AddWithValue("@Email", contact.Email);
 
             try
             {
                 connection.Open();
-                var rowsAffected = command.ExecuteNonQuery();
+                var rowsAffected = cmd.ExecuteNonQuery();
                 Console.WriteLine("Contact Inserted Successfully");
 
                 string query2 = "Select @@Identity as newId from UserDetail";
-                command.CommandText = query2;
-                command.CommandType = CommandType.Text;
-                command.Connection = connection;
-                returnId = Convert.ToInt32(command.ExecuteScalar());
+                cmd.CommandText = query2;
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = connection;
+                returnId = Convert.ToInt32(cmd.ExecuteScalar());
 
 
             }
@@ -87,7 +90,7 @@ namespace final_project_CRUD
         }
 
         //reads the specific contact regarding the ID
-        public ContactCollection getContact(int id) 
+        public ContactCollection getContact(int id)
         {
             ContactCollection c = null;
 
@@ -179,6 +182,8 @@ namespace final_project_CRUD
 
         }
 
+        
+        }
 
     }
-}
+
